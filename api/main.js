@@ -64,7 +64,7 @@ const play = {
     if ( gai == curImageState ) {
       // increase score
       score += 5
-      // reduce skip count by 2!
+      // reduce skip count by 2!3A59-C80B
       skipped = Math.max(skipped-2,0)
       $('#correct').removeClass('hidden')
       $('#score').html(score)
