@@ -2,7 +2,7 @@
 
 const make_image_lowq = (img_uri, handle, error) => {
   $.ajax({
-    url: `http://api.resmush.it/ws.php?img=${img_uri}?.jpg&qlty=70`,
+    url: `https://api.resmush.it/ws.php?img=${img_uri}?.jpg&qlty=70`,
     success: x => handle(x),
     error: () => error()
   })
