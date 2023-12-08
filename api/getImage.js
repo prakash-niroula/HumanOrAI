@@ -1,11 +1,7 @@
 // Requires Jquery !
 
 const make_image_lowq = (img_uri, handle, error) => {
-  $.ajax({
-    url: `https://api.resmush.it/ws.php?img=${img_uri}?.jpg&qlty=70`,
-    success: x => handle(x),
-    error: () => error()
-  })
+  handle({'dest': img_uri})
 }
 
 // Get image url
