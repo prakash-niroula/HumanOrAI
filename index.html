@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI or Human ?</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="api/getImage.js"></script>
+  <link rel="stylesheet" href="spinner.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sc" id="start">
+    <div class="scd">
+      <h1>Human Or AI ?</h1>
+      <a class="btn" id="start-end">Play Game</a>
+      <h3>Figure out if the shown images are AI generated or real humans !</h3>
+    </div>
+  </div>
+  <div class="sc play" id="play">
+    <div class="scd">
+      <h1>AI or Human ?</h1>
+      <div class="playchoice">
+        <h3 class="grn hidden" id="correct">Correct :)</h3>
+        <h3 class="red hidden" id="incorrect">Incorrect :(</h3>
+        <a class="btn" onclick="play.guess(0)">Real Human</a>
+        <a class="btn" onclick="play.guess(1)">AI generated</a>
+        <a onclick="play.skipImg()">Skip</a>
+        <div class="score">
+          Attempt : <span id="nog">1</span><span id>/</span><span id="noq">1</span>
+        </div>
+        <div class="score">
+          <span>Score : </span><span id="score">0</span>
+        </div>
+        <div class="score">
+          <span id="perc">0%</span> correct guesses.
+        </div>
+      </div>
+      <span></span>
+    </div>
+    <div class="ovfl">
+      <div class="loader loadingio-spinner-spinner-zohtdmy5lnr"><div class="ldio-f4rj8rc56e4">
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      </div></div>
+      <div id="playImg" class="playimg lazy">
+      </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload"></script>
+  <script src="api/main.js"></script>
+</body>
+</html>
